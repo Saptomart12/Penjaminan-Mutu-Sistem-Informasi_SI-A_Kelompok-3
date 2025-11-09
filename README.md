@@ -1,4 +1,4 @@
-# Sistem Informasi Manajemen Kinerja Akademik Personal (SIM_KAP) 
+# Sistem Informasi Manajemen Kinerja Akademik Personal (SIM_KAP)
 
 ## 📜 Deskripsi Singkat
 
@@ -10,16 +10,34 @@
 
 Berikut adalah fitur-fitur utama yang ditawarkan oleh SIM_KAP:
 
-| Fitur                   | Deskripsi                                                                                                                               |
-| :---------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| 👤 **Login Pengguna** | Mahasiswa masuk menggunakan email/NIM dan kata sandi yang terverifikasi.                                                                  |
-| 📅 **Manajemen Semester** | Membuat, mengedit, dan menghapus data semester (Nomor Semester, Status Aktif/Selesai, IP Final).                                          |
-| 📚 **Manajemen Mata Kuliah**| Menambah, mengubah, atau menghapus mata kuliah per semester (Nama MK, Kode MK, SKS).                                                    |
+| Fitur | Deskripsi |
+| :--- | :--- |
+| 👤 **Login Pengguna** | Mahasiswa masuk menggunakan email/NIM dan kata sandi yang terverifikasi. |
+| 📅 **Manajemen Semester** | Membuat, mengedit, dan menghapus data semester (Nomor Semester, Status Aktif/Selesai, IP Final). |
+| 📚 **Manajemen Mata Kuliah**| Menambah, mengubah, atau menghapus mata kuliah per semester (Nama MK, Kode MK, SKS). |
 | ✍️ **Manajemen Tugas** | Menambah tugas baru per mata kuliah, mengatur tenggat waktu, deskripsi, dan menandai status penyelesaian (Selesai/Belum Selesai/Dinilai). |
-| 💯 **Input Nilai** | Memasukkan nilai untuk setiap tugas, UTS, dan UAS yang disimpan untuk analisis.                                                          |
-| 📊 **Perhitungan & Evaluasi** | Otomatis menghitung IP semester berdasarkan nilai yang dimasukkan. Menampilkan evaluasi kinerja dan distribusi nilai tiap semester.    |
-| 📄 **Laporan Kinerja** | Menampilkan riwayat IP per semester dalam bentuk tabel dan grafik. Laporan dapat diunduh dalam format PDF.                             |
-| 🚪 **Logout** | Keluar dari sistem dengan aman, mengakhiri sesi pengguna.                                                                                |
+| 💯 **Input Nilai** | Memasukkan nilai untuk setiap tugas, UTS, dan UAS yang disimpan untuk analisis. |
+| 📊 **Perhitungan & Evaluasi** | Otomatis menghitung IP semester berdasarkan nilai yang dimasukkan. Menampilkan evaluasi kinerja dan distribusi nilai tiap semester. |
+| 📄 **Laporan Kinerja** | Menampilkan riwayat IP per semester dalam bentuk tabel dan grafik. Laporan dapat diunduh dalam format PDF. |
+| 🚪 **Logout** | Keluar dari sistem dengan aman, mengakhiri sesi pengguna. |
+
+---
+
+## 🗓️ Linimasa Pengerjaan (Time Schedule)
+
+Berikut adalah linimasa pengerjaan proyek SIM_KAP:
+
+| No | Tahapan Pekerjaan | Durasi | Tanggal Mulai | Tanggal Selesai | Keterangan |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | Perencanaan Awal Proyek | 2 hari | Sabtu, 26 Okt 2025 | Minggu, 27 Okt 2025 | Penentuan ruang lingkup, jadwal, dan tim kerja |
+| 2 | SRS & Desain Sistem | 3 hari | Senin, 28 Okt 2025 | Rabu, 30 Okt 2025 | Pembuatan dokumen kebutuhan sistem dan desain UI |
+| 3 | Pembuatan Database | 1 hari | Sabtu, 26 Okt 2025 | Minggu, 27 Okt 2025 | Struktur tabel dan relasi database |
+| 4 | Implementasi Coding | 3 hari | Selasa, 28 Okt 2025 | Kamis, 30 Okt 2025 | Uji coba modul core sistem dan dashboard |
+| 5 | Testing & Evaluation | 4 hari | Sabtu, 1 Nov 2025 | Selasa, 4 Nov 2025 | Uji coba web dan evaluasi fungsi sistem |
+| 6 | Uji Coba Web | 2 hari | Sabtu, 1 Nov 2025 | Minggu, 2 Nov 2025 | Pengujian fungsionalitas sistem oleh pengguna |
+| 7 | Evaluasi & Perbaikan | 2 hari | Senin, 3 Nov 2025 | Selasa, 4 Nov 2025 | Evaluasi hasil uji coba dan perbaikan bug |
+| 8 | Pelaporan Akhir (QA) | 2 hari | Selasa, 4 Nov 2025 | Rabu, 5 Nov 2025 | Dokumentasi hasil testing dan laporan kualitas |
+| 9 | Dokumentasi Final | 10 hari | Sabtu, 26 Okt 2025 | Rabu, 5 Nov 2025 | Penyusunan laporan proyek dan dokumentasi sistem |
 
 ---
 
@@ -45,8 +63,8 @@ Berikut langkah-langkah untuk menjalankan proyek ini di komputer lokal:
 
 1.  **Clone Repositori:**
     ```bash
-    git clone [https://github.com/ldclabs/anda](https://github.com/ldclabs/anda)
-    cd nama-folder-proyek 
+    git clone [https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi-Kelompok-Kelompok-3-SIM_KAP.git](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi-Kelompok-Kelompok-3-SIM_KAP.git)
+    cd Penjaminan-Mutu-Sistem-Informasi-Kelompok-Kelompok-3-SIM_KAP
     ```
 
 2.  **Install Dependencies:**
@@ -91,12 +109,12 @@ Berikut langkah-langkah untuk menjalankan proyek ini di komputer lokal:
 
 Proyek ini dikembangkan oleh:
 
-| NIM       | Nama                             |
-| :-------- | :------------------------------- |
-| F52123012 | Gilang Aldiansyah                |
-| F52123016 | Salsabila Ramadhani Zen          |
-| F52123017 | Zharnativa Al Adiyah Nurba       |
-| F52123019 | Panji Angga Saputra              |
-| F52123028 | Sapto Mart Saputra Wicaksono     |
+| NIM | Nama |
+| :--- | :--- |
+| F52123012 | Gilang Aldiansyah |
+| F52123016 | Salsabila Ramadhani Zen |
+| F52123017 | Zharnativa Al Adiyah Nurba |
+| F52123019 | Panji Angga Saputra |
+| F52123028 | Sapto Mart Saputra Wicaksono |
 
 ---
