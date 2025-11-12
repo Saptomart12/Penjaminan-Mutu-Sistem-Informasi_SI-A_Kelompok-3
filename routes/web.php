@@ -4,28 +4,33 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes (Versi Uji Coba Login)
 |--------------------------------------------------------------------------
 */
 
-// Arahkan halaman utama ke dashboard
+// 1. Halaman utama (/) akan langsung redirect ke halaman login.
 Route::get('/', function () {
-    return view('dashboard');
-})->name('dashboard'); // Beri nama 'dashboard'
+    return redirect()->route('login');
+});
 
-// Rute Riwayat Semester
-Route::get('/riwayat', function () {
-    return view('riwayat');
-})->name('riwayat'); // Beri nama 'riwayat'
+// 2. Grup Rute yang Membutuhkan Login (Authentication)
+Route::middleware(['auth'])->group(function () {
 
-// Rute Mata Kuliah (gunakan tanda hubung)
-Route::get('/mata-kuliah', function () {
-    return view('mata-kuliah');
-})->name('mata-kuliah'); // Beri nama 'mata-kuliah'
+    // Rute Dashboard (SIMPLE)
+    // Langsung return view 'dashboard' tanpa controller.
+    Route::get('/dashboard', function () {
+        // Halaman ini HANYA AKAN TAMPIL JIKA SUDAH LOGIN
+        return view('dashboard'); 
+    })->name('dashboard');
 
-// Tambahkan rute login dan register jika diperlukan nanti
-// Route::get('/login', function () { ... })->name('login');
-// Route::get('/register', function () { ... })->name('register');
+    // Rute Profil (wajib ada untuk tombol profile di topbar)
+    Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [\App\Http\Controllers\ProfileController::class, 'destroy'])->name('profile.destroy');
 
-// Jika Anda menggunakan Otentikasi Laravel (Breeze/Jetstream)
-// require __DIR__.'/auth.php';
+}); // Akhir dari Route::middleware('auth')->group()
+
+
+// 3. Include Rute Otentikasi Bawaan Breeze
+// Ini akan mengurus GET /login, POST /login, GET /register, POST /register, dll.
+require __DIR__.'/auth.php';

@@ -1,4 +1,4 @@
-{{-- Menggunakan layout induk --}}
+{{-- Menggunakan layout induk SB Admin 2 --}}
 @extends('layouts.app')
 
 {{-- Mengatur judul halaman --}}
@@ -6,52 +6,24 @@
 
 {{-- Memasukkan konten utama --}}
 @section('content')
+<div class="container-fluid">
 
-{{-- content --}}
+    {{-- Page Heading --}}
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    </div>
 
+    {{-- Alert Sukses --}}
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Berhasil Login!</h4>
+        <p>Anda berhasil masuk ke halaman dashboard. Ini membuktikan bahwa fitur <b>Login</b> dan <b>Register</b> (via Laravel Breeze) sudah berfungsi dengan benar.</p>
+        <hr>
+    </div>
+
+    {{-- 
+    Di sinilah nanti kita akan menempatkan
+    5 fragmen (Tugas, Visualisasi, Prediksi IP, dll)
+    --}}
+
+</div>
 @endsection
-
-{{-- Push script khusus untuk chart dashboard --}}
-@push('scripts')
-    <script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
-    {{-- Ganti dengan script chart Anda nanti --}}
-    <script>
-        // Placeholder simple untuk chart area
-        var ctx = document.getElementById("visualisasiDiagramKualitas");
-        if(ctx) { // Cek jika elemen canvas ada
-             ctx.style.display = 'block'; // Tampilkan canvas jika JS aktif
-             document.querySelector('.chart-area .text-center').style.display = 'none'; // Sembunyikan placeholder
-             var myLineChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ["Tugas 1", "Tugas 2", "Tugas 3", "Tugas 4", "Tugas 5"], // Label tugas
-                    datasets: [{
-                        label: "Nilai Rata-rata",
-                        lineTension: 0.3,
-                        backgroundColor: "rgba(78, 115, 223, 0.05)",
-                        borderColor: "rgba(78, 115, 223, 1)",
-                        pointRadius: 3,
-                        pointBackgroundColor: "rgba(78, 115, 223, 1)",
-                        pointBorderColor: "rgba(78, 115, 223, 1)",
-                        pointHoverRadius: 3,
-                        pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-                        pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-                        pointHitRadius: 10,
-                        pointBorderWidth: 2,
-                        data: [80, 85, 78, 90, 88], // Data nilai
-                    }],
-                },
-                options: {
-                    maintainAspectRatio: false,
-                    layout: { padding: { left: 10, right: 25, top: 25, bottom: 0 } },
-                    scales: {
-                        xAxes: [{ time: { unit: 'date' }, gridLines: { display: false, drawBorder: false }, ticks: { maxTicksLimit: 7 } }],
-                        yAxes: [{ ticks: { maxTicksLimit: 5, padding: 10, suggestedMin: 50, suggestedMax: 100 }, gridLines: { color: "rgb(234, 236, 244)", zeroLineColor: "rgb(234, 236, 244)", drawBorder: false, borderDash: [2], zeroLineBorderDash: [2] } }],
-                    },
-                    legend: { display: false },
-                    tooltips: { /* Pengaturan Tooltip */ }
-                }
-            });
-        }
-    </script>
-@endpush
