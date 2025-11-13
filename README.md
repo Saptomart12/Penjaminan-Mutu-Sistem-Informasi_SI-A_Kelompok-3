@@ -2,7 +2,7 @@
 
 ## 📜 Deskripsi Singkat
 
-**SIM_KAP** adalah aplikasi web yang dirancang untuk membantu mahasiswa memantau, mengelola, dan mengevaluasi kinerja akademik mereka secara sistematis. Aplikasi ini berfungsi sebagai asisten pribadi untuk mencatat tugas, melacak nilai, menghitung IP semester, dan memberikan evaluasi agar mahasiswa dapat meningkatkan prestasi di semester berikutnya.
+*SIM_KAP* adalah aplikasi web yang dirancang untuk membantu mahasiswa memantau, mengelola, dan mengevaluasi kinerja akademik mereka secara sistematis. Aplikasi ini berfungsi sebagai asisten pribadi untuk mencatat tugas, melacak nilai, menghitung IP semester, dan memberikan evaluasi agar mahasiswa dapat meningkatkan prestasi di semester berikutnya.
 
 ---
 
@@ -12,48 +12,32 @@ Berikut adalah fitur-fitur utama yang ditawarkan oleh SIM_KAP:
 
 | Fitur | Deskripsi |
 | :--- | :--- |
-| 👤 **Login Pengguna** | Mahasiswa masuk menggunakan email/NIM dan kata sandi yang terverifikasi. |
-| 📅 **Manajemen Semester** | Membuat, mengedit, dan menghapus data semester (Nomor Semester, Status Aktif/Selesai, IP Final). |
-| 📚 **Manajemen Mata Kuliah**| Menambah, mengubah, atau menghapus mata kuliah per semester (Nama MK, Kode MK, SKS). |
-| ✍️ **Manajemen Tugas** | Menambah tugas baru per mata kuliah, mengatur tenggat waktu, deskripsi, dan menandai status penyelesaian (Selesai/Belum Selesai/Dinilai). |
-| 💯 **Input Nilai** | Memasukkan nilai untuk setiap tugas, UTS, dan UAS yang disimpan untuk analisis. |
-| 📊 **Perhitungan & Evaluasi** | Otomatis menghitung IP semester berdasarkan nilai yang dimasukkan. Menampilkan evaluasi kinerja dan distribusi nilai tiap semester. |
-| 📄 **Laporan Kinerja** | Menampilkan riwayat IP per semester dalam bentuk tabel dan grafik. Laporan dapat diunduh dalam format PDF. |
-| 🚪 **Logout** | Keluar dari sistem dengan aman, mengakhiri sesi pengguna. |
+| 👤 *Login Pengguna* | Mahasiswa masuk menggunakan email/NIM dan kata sandi yang terverifikasi. |
+| 📅 *Manajemen Semester* | Membuat, mengedit, dan menghapus data semester (Nomor Semester, Status Aktif/Selesai, IP Final). |
+| 📚 *Manajemen Mata Kuliah*| Menambah, mengubah, atau menghapus mata kuliah per semester (Nama MK, Kode MK, SKS). |
+| ✍ *Manajemen Tugas* | Menambah tugas baru per mata kuliah, mengatur tenggat waktu, deskripsi, dan menandai status penyelesaian (Selesai/Belum Selesai/Dinilai). |
+| 💯 *Input Nilai* | Memasukkan nilai untuk setiap tugas, UTS, dan UAS yang disimpan untuk analisis. |
+| 📊 *Perhitungan & Evaluasi* | Otomatis menghitung IP semester berdasarkan nilai yang dimasukkan. Menampilkan evaluasi kinerja dan distribusi nilai tiap semester. |
+| 📄 *Laporan Kinerja* | Menampilkan riwayat IP per semester dalam bentuk tabel dan grafik. Laporan dapat diunduh dalam format PDF. |
+| 🚪 *Logout* | Keluar dari sistem dengan aman, mengakhiri sesi pengguna. |
 
 ---
 
-## 🗓️ Linimasa Pengerjaan (Time Schedule)
-
-Berikut adalah linimasa pengerjaan proyek SIM_KAP:
-
-| No | Tahapan Pekerjaan | Durasi | Tanggal Mulai | Tanggal Selesai | Keterangan |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Perencanaan Awal Proyek | 2 hari | Sabtu, 26 Okt 2025 | Minggu, 27 Okt 2025 | Penentuan ruang lingkup, jadwal, dan tim kerja |
-| 2 | SRS & Desain Sistem | 3 hari | Senin, 28 Okt 2025 | Rabu, 30 Okt 2025 | Pembuatan dokumen kebutuhan sistem dan desain UI |
-| 3 | Pembuatan Database | 1 hari | Sabtu, 26 Okt 2025 | Minggu, 27 Okt 2025 | Struktur tabel dan relasi database |
-| 4 | Implementasi Coding | 3 hari | Selasa, 28 Okt 2025 | Kamis, 30 Okt 2025 | Uji coba modul core sistem dan dashboard |
-| 5 | Testing & Evaluation | 4 hari | Sabtu, 1 Nov 2025 | Selasa, 4 Nov 2025 | Uji coba web dan evaluasi fungsi sistem |
-| 6 | Uji Coba Web | 2 hari | Sabtu, 1 Nov 2025 | Minggu, 2 Nov 2025 | Pengujian fungsionalitas sistem oleh pengguna |
-| 7 | Evaluasi & Perbaikan | 2 hari | Senin, 3 Nov 2025 | Selasa, 4 Nov 2025 | Evaluasi hasil uji coba dan perbaikan bug |
-| 8 | Pelaporan Akhir (QA) | 2 hari | Selasa, 4 Nov 2025 | Rabu, 5 Nov 2025 | Dokumentasi hasil testing dan laporan kualitas |
-| 9 | Dokumentasi Final | 10 hari | Sabtu, 26 Okt 2025 | Rabu, 5 Nov 2025 | Penyusunan laporan proyek dan dokumentasi sistem |
-
+## 🖼 Tampilan Aplikasi
 ---
-
-## 🖼️ Tampilan Aplikasi
-
-![Tampilan Dashboard SIMAK](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi_SI-A_Kelompok-3/blob/edca3cca40ad140338061540e08dac5487ba5e87/public/assets/images/dashboard-simak.png)
-
+## Login
+![Tampilan Login SIM_KAP](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi_SI-A_Kelompok-3/blob/edca3cca40ad140338061540e08dac5487ba5e87/public/assets/images/tampilan-login.png)
 ---
+## Register
+![Tampilan Register SIM_KAP](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi_SI-A_Kelompok-3/blob/edca3cca40ad140338061540e08dac5487ba5e87/public/assets/images/tampilan-register.png)
 
 ## 💻 Teknologi yang Digunakan
 
-* **Backend:** PHP, Laravel Framework
-* **Frontend:** HTML, CSS, JavaScript, Bootstrap 5
-* **Template Admin:** SB Admin 2
-* **Database:** MySQL
-* **Charting:** Chart.js
+* *Backend:* PHP, Laravel Framework
+* *Frontend:* HTML, CSS, JavaScript, Bootstrap 5
+* *Template Admin:* SB Admin 2
+* *Database:* MySQL
+* *Charting:* Chart.js
 
 ---
 
@@ -61,47 +45,47 @@ Berikut adalah linimasa pengerjaan proyek SIM_KAP:
 
 Berikut langkah-langkah untuk menjalankan proyek ini di komputer lokal:
 
-1.  **Clone Repositori:**
-    ```bash
+1.  *Clone Repositori:*
+    bash
     git clone [https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi-Kelompok-Kelompok-3-SIM_KAP.git](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi-Kelompok-Kelompok-3-SIM_KAP.git)
     cd Penjaminan-Mutu-Sistem-Informasi-Kelompok-Kelompok-3-SIM_KAP
-    ```
+    
 
-2.  **Install Dependencies:**
+2.  *Install Dependencies:*
     Pastikan Anda sudah menginstal Composer dan Node.js/NPM.
-    ```bash
+    bash
     composer install
     npm install 
     npm run build 
-    ```
-    *(Jika Anda tidak menggunakan Vite/NPM untuk aset frontend, lewati `npm install` dan `npm run build`)*
+    
+    *(Jika Anda tidak menggunakan Vite/NPM untuk aset frontend, lewati npm install dan npm run build)*
 
-3.  **Setup Environment File:**
-    Salin file `.env.example` menjadi `.env`.
-    ```bash
+3.  *Setup Environment File:*
+    Salin file .env.example menjadi .env.
+    bash
     cp .env.example .env
-    ```
-    Buka file `.env` dan konfigurasikan koneksi database Anda (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
+    
+    Buka file .env dan konfigurasikan koneksi database Anda (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
 
-4.  **Generate Application Key:**
-    ```bash
+4.  *Generate Application Key:*
+    bash
     php artisan key:generate
-    ```
+    
 
-5.  **Jalankan Migrasi Database:**
+5.  *Jalankan Migrasi Database:*
     Perintah ini akan membuat tabel-tabel yang diperlukan di database Anda.
-    ```bash
+    bash
     php artisan migrate
-    ```
-    *(Opsional: Jika Anda punya data *seeder*, jalankan `php artisan db:seed`)*
+    
+    (Opsional: Jika Anda punya data *seeder, jalankan php artisan db:seed)*
 
-6.  **Jalankan Development Server:**
-    ```bash
+6.  *Jalankan Development Server:*
+    bash
     php artisan serve
-    ```
+    
 
-7.  **Buka Aplikasi:**
-    Buka browser Anda dan kunjungi alamat yang ditampilkan (biasanya `http://127.0.0.1:8000`).
+7.  *Buka Aplikasi:*
+    Buka browser Anda dan kunjungi alamat yang ditampilkan (biasanya http://127.0.0.1:8000).
 
 ---
 
