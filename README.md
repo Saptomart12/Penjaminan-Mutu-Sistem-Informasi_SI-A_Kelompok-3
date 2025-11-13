@@ -26,10 +26,10 @@ Berikut adalah fitur-fitur utama yang ditawarkan oleh SIM_KAP:
 ## 🖼 Tampilan Aplikasi
 ---
 ## Login
-![Tampilan Login SIM_KAP](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi_SI-A_Kelompok-3/blob/edca3cca40ad140338061540e08dac5487ba5e87/public/assets/images/tampilan-login.png)
+![Tampilan Login SIM_KAP](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi_SI-A_Kelompok-3/blob/c37eca88038019437c22fc587132a2116a2c2d36/public/assets/images/tampilan-login.png)
 ---
 ## Register
-![Tampilan Register SIM_KAP](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi_SI-A_Kelompok-3/blob/edca3cca40ad140338061540e08dac5487ba5e87/public/assets/images/tampilan-register.png)
+![Tampilan Register SIM_KAP](https://github.com/Saptomart12/Penjaminan-Mutu-Sistem-Informasi_SI-A_Kelompok-3/blob/c37eca88038019437c22fc587132a2116a2c2d36/public/assets/images/tampilan-register.png)
 
 ## 💻 Teknologi yang Digunakan
 
