@@ -42,4 +42,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // ==========================================
+    //  TAMBAHKAN KODE INI (RELASI KE SEMESTER)
+    // ==========================================
+    
+    /**
+     * Relasi: User memiliki banyak Semester
+     */
+    public function semesters()
+    {
+        // Ini artinya: User ini nyambung ke model Semester
+        return $this->hasMany(Semester::class);
+    }
 }
