@@ -9,6 +9,9 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
         Schema::create('courses', function (Blueprint $table) {
@@ -16,7 +19,10 @@ return new class extends Migration
             $table->foreignId('semester_id') // Foreign key ke tabel semesters
                   ->constrained()
                   ->onDelete('cascade'); // Jika semester dihapus, mata kuliah ikut terhapus
-            $table->string('course_name');
+            $table->string('course_name'); // Nama mata kuliah (varchar)
+            // Jika butuh Kode MK atau SKS, tambahkan di sini:
+            // $table->string('course_code')->nullable();
+            // $table->integer('sks')->nullable();
             $table->timestamps();
         });
     }

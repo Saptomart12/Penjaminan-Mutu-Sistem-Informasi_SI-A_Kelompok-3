@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-// use Illuminate\Support\Facades\Log; // Uncomment jika butuh logging
+// use Illuminate\Support\Facades\Log; // Uncomment jika butuh loggin
 
 class SemesterController extends Controller
 {

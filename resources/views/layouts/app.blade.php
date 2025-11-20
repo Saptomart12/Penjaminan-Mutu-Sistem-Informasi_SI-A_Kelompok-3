@@ -58,22 +58,12 @@
     </div>
     {{-- End of Page Wrapper --}}
 
+    @include('layouts.partials.modals')
+
     {{-- Scroll to Top Button (Bagian dari modals.blade.php di layout lama, pindah ke sini lebih baik) --}}
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-    
-    {{-- 
-      CATATAN: @include('layouts.partials.modals') 
-      TIDAK ADA DI SINI, karena kita memanggilnya di dalam 
-      @section('content') di file (cth: dashboard.blade.php) 
-      agar modal bisa menerima variabel (seperti $courses).
-    --}}
-
-      {{-- ========================================================= --}}
-    {{--           TAMBAHKAN INCLUDE MODAL GLOBAL DI SINI          --}}
-    {{-- ========================================================= --}}
-    @include('layouts.partials.global-modals')
 
     {{-- Aset JS Umum --}}
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
