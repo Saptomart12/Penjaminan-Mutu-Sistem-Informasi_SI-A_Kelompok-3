@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+   public function up(): void
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('description')->nullable(); // Deskripsi tugas (boleh kosong)
             $table->dateTime('deadline'); // Tenggat waktu
             $table->enum('status', ['pending', 'completed', 'graded'])->default('pending'); // Status tugas
-            $table->decimal('score', 5, 2)->nullable(); // Nilai tugas (misal: 85.50), boleh kosong
+            $table->decimal('score', 5, 2)->nullable(); // Nilai tugas (misal: 85.50), boleh kosong
             $table->timestamps();
         });
     }
