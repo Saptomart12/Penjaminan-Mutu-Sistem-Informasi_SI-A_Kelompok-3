@@ -1,62 +1,62 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+// Impor semua Controller di bagian atas
 use App\Http\Controllers\ProfileController;
-// PENTING: Tambahkan Controller Semester di sini agar route di bawah terbaca
-use App\Http\Controllers\SemesterController; 
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\SemesterController;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TaskFileController;
+use App\Http\Controllers\RiwayatController;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth; // Diperlukan untuk closure Riwayat
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes (Proyek Clone - Integrasi Fitur Semester)
+| Web Routes
 |--------------------------------------------------------------------------
 */
 
-// 1. Halaman utama (/) akan langsung redirect ke halaman login.
+// Halaman utama langsung redirect ke login
 Route::get('/', function () {
     return redirect()->route('login');
 });
 
-// 2. Grup Rute yang Membutuhkan Login (Authentication)
+// Grup Rute yang Membutuhkan Login (Authentication)
 Route::middleware(['auth'])->group(function () {
 
-    // Rute Dashboard (Masih versi simpel/closure sesuai proyek clone)
-    Route::get('/dashboard', function () {
-        return view('dashboard'); 
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+    // Rute Resource
+    Route::resource('mata-kuliah', CourseController::class);
+    
     // =========================================================
-    //           FITUR KELOLA SEMESTER (BARU DITAMBAHKAN)
+    //         FOKUS PADA RUTE SEMESTER (DIRAPIKAN)
     // =========================================================
     
-    // Menampilkan daftar semester
+    // Halaman utama "Kelola Semester" (List)
     Route::get('/semester', [SemesterController::class, 'index'])->name('semester.index');
-    
     // Menyimpan semester baru
     Route::post('/semester', [SemesterController::class, 'store'])->name('semester.store');
-    
-    // Mengupdate status/data semester
+    // Mengaktifkan semester
     Route::put('/semester/{semester}', [SemesterController::class, 'update'])->name('semester.update');
-    
-    // Menghapus semester
+    // Menghapus semester (jika perlu)
     Route::delete('/semester/{semester}', [SemesterController::class, 'destroy'])->name('semester.destroy');
     
-    // Halaman form "Akhiri Semester" (Evaluasi)
+    // Halaman form "Akhiri Semester"
     Route::get('/semester/finalize', [SemesterController::class, 'showFinalizeForm'])
          ->name('semester.finalize.form');
-         
-    // Memproses "Akhiri Semester"
+    // Memproses form "Akhiri Semester"
     Route::post('/semester/finalize', [SemesterController::class, 'finalizeSemester'])
          ->name('semester.finalize.store');
-
     // =========================================================
 
-    // Rute Profil (Bawaan)
+    // Rute Profil
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 }); // Akhir dari Route::middleware('auth')->group()
 
-
-// 3. Include Rute Otentikasi Bawaan Breeze
+// Include Rute Otentikasi Bawaan Breeze
 require __DIR__.'/auth.php';
