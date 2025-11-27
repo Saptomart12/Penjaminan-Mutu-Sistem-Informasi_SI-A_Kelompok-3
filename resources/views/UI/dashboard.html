@@ -163,6 +163,21 @@
                                 </div>
                             </div>
 
+                            <!-- Visualiasi -->
+                            <!-- FRAGMEN 4: Visualisasi Chart -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-chart-line mr-2"></i> Visualisasi Kinerja Semester Ini</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-gray-700">Diagram ini memvisualisasikan progres penyelesaian tugas dan rata-rata nilai yang Anda peroleh sejauh ini.</p>
+                                    <div class="chart-area pt-4 pb-2">
+                                        <canvas id="visualisasiDiagramKualitas"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Visualiasi end -->
+
                         </div>
                         
                     <!-- card prediksi ip semester -->
@@ -200,8 +215,34 @@
                                     <a href="#" class="btn btn-sm btn-outline-warning mt-2">Lihat Detail Riwayat &rarr;</a>
                                  </div>
                             </div>
-
                      <!-- card evaluasi semester selesai -->
+
+                     <!-- Rekap niali -->
+                            <div class="card shadow mb-4">
+                                 <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-info"><i class="fas fa-medal mr-2"></i> Rangkuman Nilai Semester Lalu</h6>
+                                 </div>
+                                 <div class="card-body">
+                                    <!-- Nilai A -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-success"><i class="fas fa-check-circle mr-1"></i> Sangat Baik (A)</span>
+                                        <span class="font-weight-bold">4 Tugas</span>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 5px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 80%"></div>
+                                    </div>
+                                    <!-- Nilai B -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="text-info"><i class="fas fa-thumbs-up mr-1"></i> Baik (B)</span>
+                                        <span class="font-weight-bold">1 Tugas</span>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 5px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 20%"></div>
+                                    </div>
+                                 </div>
+                            </div>
+
+                     <!-- Rekap nilai end -->
                         </div>
                     
                     </div> <!-- Akhir Row -->
