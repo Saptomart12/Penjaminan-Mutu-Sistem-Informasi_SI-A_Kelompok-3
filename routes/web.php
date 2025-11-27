@@ -7,7 +7,7 @@ use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TaskFileController;
-use App\Http\Controllers\RiwayatController;
+use App\Http\Controllers\RiwayatController; // <-- TAMBAHKAN INI
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth; // Diperlukan untuk closure Riwayat
 
@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Rute Resource
     Route::resource('mata-kuliah', CourseController::class);
+    Route::resource('tugas', TaskController::class);
     
     // =========================================================
     //         FOKUS PADA RUTE SEMESTER (DIRAPIKAN)
@@ -51,6 +52,15 @@ Route::middleware(['auth'])->group(function () {
          ->name('semester.finalize.store');
     // =========================================================
 
+    // Rute File Tugas
+    Route::post('/tugas/{tuga}/files', [TaskFileController::class, 'store'])->name('tugas.files.store');
+    Route::delete('/tugas/files/{taskFile}', [TaskFileController::class, 'destroy'])->name('tugas.files.destroy');
+    Route::get('/preview-file/{taskFile}', [TaskFileController::class, 'preview'])->name('tugas.files.preview');
+    Route::patch('/tugas/{tuga}/update-description', [TaskController::class, 'updateDescription'])->name('tugas.update.description');
+    Route::patch('/tugas/{tuga}/details', [TaskController::class, 'updateDetails'])->name('tugas.updateDetails');
+
+    // Rute Riwayat
+    Route::get('/riwayat', [RiwayatController::class, 'index'])->name('riwayat');
 
     // Rute Profil
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
