@@ -41,6 +41,17 @@
                 </a>
             </li>
 
+            {{-- Nav Item - Riwayat Semester --}}
+            <li class="nav-item {{ Request::routeIs('riwayat') ? 'active' : '' }}">
+
+    {{-- Nav Item - Riwayat Semester --}}
+     {{-- Kondisi active diubah ke Request::routeIs('riwayat') --}}
+    <li class="nav-item {{ Request::routeIs('riwayat') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('riwayat') }}">
+            <i class="fas fa-fw fa-history"></i>
+            <span>Riwayat Semester</span>
+        </a>
+    </li>
 
     <hr class="sidebar-divider d-none d-md-block">
     <div class="text-center d-none d-md-inline">
