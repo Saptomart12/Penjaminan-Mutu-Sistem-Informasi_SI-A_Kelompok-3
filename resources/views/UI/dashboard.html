@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard - SIM KAP (Static Preview)</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- SB Admin 2 CSS via CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom Styles untuk simulasi */
+        .bg-gradient-primary { background-color: #4e73df; background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%); background-size: cover; }
+        .sidebar-brand-icon { font-size: 2rem; }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar (Mockup) -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-graduation-cap"></i></div>
+                <div class="sidebar-brand-text mx-3">APIPANAS</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="fas fa-fw fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-fw fa-book"></i><span>Mata Kuliah</span></a>
+            </li>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar (Mockup) -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"><i class="fa fa-bars"></i></button>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Gilang Aldiansyah</span>
+                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content (HASIL KONVERSI BLADE) -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading & Welcome Message -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <h1 class="h3 mb-1 text-gray-800">Selamat Datang Kembali, Gilang Aldiansyah!</h1>
+                            <p class="mb-0 text-gray-600">
+                                Pantau progres akademik Anda di <strong>Semester 5</strong>.
+                            </p>
+                        </div>
+                        <!-- Tombol Akhiri Semester -->
+                        <a href="#" class="btn btn-sm btn-danger shadow-sm">
+                            <i class="fas fa-flag-checkered fa-sm text-white-50"></i> Akhiri Semester
+                        </a>
+                    </div>
+
+                    <!-- Alert Sukses (Contoh Dummy) -->
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Berhasil login! Selamat beraktivitas.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                    </div>
+
+                    <!-- Konten Utama -->
+                    <div class="row">
+
+                        <!-- Kolom Kiri -->
+                        <div class="col-xl-8 col-lg-7">
+
+                            <!-- FRAGMEN 1: KELOLA TUGAS -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-tasks mr-2"></i> Daftar Tugas Semester Ini</h6>
+                                    <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tambahTugasModal">
+                                        <i class="fas fa-plus fa-sm mr-1"></i> Tambah Tugas
+                                    </a>
+                                </div>
+                                
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <!-- TABS Navigation -->
+                                        <ul class="nav nav-tabs" id="taskStatusTabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="semua-tab" data-toggle="tab" href="#semua" role="tab">Semua (5)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab">Belum Selesai (2)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="graded-tab" data-toggle="tab" href="#graded" role="tab">Sudah Dinilai (3)</a>
+                                            </li>
+                                        </ul>
+                                        
+                                        <!-- Filter Dropdown -->
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="filterDropdownButton" data-toggle="dropdown">
+                                                <i class="fas fa-filter fa-sm mr-1"></i> 
+                                                <span id="filter-button-text">Filter Mata Kuliah</span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item task-filter-trigger" href="#" data-course-id="all" data-course-name="Tampilkan Semua">Tampilkan Semua</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item task-filter-trigger" href="#" data-course-id="1" data-course-name="Pemrograman Web">Pemrograman Web</a>
+                                                <a class="dropdown-item task-filter-trigger" href="#" data-course-id="2" data-course-name="Basis Data">Basis Data</a>
+                                                <a class="dropdown-item task-filter-trigger" href="#" data-course-id="3" data-course-name="Jaringan Komputer">Jaringan Komputer</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tab Content (Tabel Dummy) -->
+                                    <div class="tab-content" id="taskStatusTabsContent">
+                                        <!-- TAB 1: SEMUA -->
+                                        <div class="tab-pane fade show active" id="semua" role="tabpanel">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered" width="100%" cellspacing="0">
+                                                    <thead>
+                                                        <tr><th>Tugas</th><th>Mata Kuliah</th><th>Status</th><th>Nilai</th></tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="task-row" data-course-id="1"><td>Membuat API</td><td>Pemrograman Web</td><td><span class="badge badge-success">Selesai</span></td><td>90</td></tr>
+                                                        <tr class="task-row" data-course-id="2"><td>ERD Toko Online</td><td>Basis Data</td><td><span class="badge badge-warning">Belum Selesai</span></td><td>-</td></tr>
+                                                        <tr class="task-row" data-course-id="3"><td>Subnetting</td><td>Jaringan Komputer</td><td><span class="badge badge-success">Selesai</span></td><td>85</td></tr>
+                                                        <tr class="task-row" data-course-id="1"><td>Frontend React</td><td>Pemrograman Web</td><td><span class="badge badge-warning">Belum Selesai</span></td><td>-</td></tr>
+                                                        <tr class="task-row" data-course-id="2"><td>Normalisasi</td><td>Basis Data</td><td><span class="badge badge-success">Selesai</span></td><td>88</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- TAB 2: PENDING (Hanya Mockup Konten) -->
+                                        <div class="tab-pane fade" id="pending" role="tabpanel">
+                                            <div class="text-center py-3 text-muted">Menampilkan 2 Tugas Belum Selesai...</div>
+                                        </div>
+                                        <!-- TAB 3: GRADED (Hanya Mockup Konten) -->
+                                        <div class="tab-pane fade" id="graded" role="tabpanel">
+                                            <div class="text-center py-3 text-muted">Menampilkan 3 Tugas Sudah Dinilai...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div> <!-- Akhir Row -->
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; APIPANAS 2025</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Modal Dummy Tambah Tugas -->
+    <div class="modal fade" id="tambahTugasModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Tugas Baru</h5>
+                    <button class="close" type="button" data-dismiss="modal"><span>×</span></button>
+                </div>
+                <div class="modal-body"><p>Form input tugas akan muncul di sini.</p></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <button class="btn btn-primary" type="button">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <!-- Custom Script dari Blade -->
+    <script>
+        // 1. Script Chart.js Dummy Data
+        var ctx = document.getElementById("visualisasiDiagramKualitas");
+        if(ctx) {
+            var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["Tgs 1", "Tgs 2", "Tgs 3", "Tgs 4", "Tgs 5"],
+                    datasets: [{
+                        label: "Nilai",
+                        lineTension: 0.3,
+                        backgroundColor: "rgba(78, 115, 223, 0.05)",
+                        borderColor: "rgba(78, 115, 223, 1)",
+                        pointRadius: 3,
+                        pointBackgroundColor: "rgba(78, 115, 223, 1)",
+                        pointBorderColor: "rgba(78, 115, 223, 1)",
+                        pointHoverRadius: 3,
+                        pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+                        pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+                        pointHitRadius: 10,
+                        pointBorderWidth: 2,
+                        data: [80, 85, 70, 90, 88],
+                    }],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    layout: { padding: { left: 10, right: 25, top: 25, bottom: 0 } },
+                    scales: {
+                        xAxes: [{ gridLines: { display: false, drawBorder: false }, ticks: { maxTicksLimit: 7 } }],
+                        yAxes: [{ ticks: { maxTicksLimit: 5, padding: 10, suggestedMin: 50, suggestedMax: 100 }, gridLines: { color: "rgb(234, 236, 244)", zeroLineColor: "rgb(234, 236, 244)", drawBorder: false, borderDash: [2], zeroLineBorderDash: [2] } }],
+                    },
+                    legend: { display: false },
+                }
+            });
+        }
+
+        // 2. Script Filter JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.task-filter-trigger');
+            const allTaskRows = document.querySelectorAll('.task-row');
+            const filterButtonText = document.getElementById('filter-button-text');
+
+            filterButtons.forEach(function (button) {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault(); 
+                    const filterId = this.dataset.courseId;
+                    const filterName = this.dataset.courseName;
+
+                    filterButtonText.textContent = filterName;
+
+                    allTaskRows.forEach(function (row) {
+                        const rowCourseId = row.dataset.courseId;
+                        if (filterId === 'all') {
+                            row.style.display = ''; 
+                        } else if (rowCourseId === filterId) {
+                            row.style.display = ''; 
+                        } else {
+                            row.style.display = 'none'; 
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
