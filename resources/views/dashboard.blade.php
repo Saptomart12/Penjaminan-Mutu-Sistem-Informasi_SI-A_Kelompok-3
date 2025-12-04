@@ -22,7 +22,7 @@
             </p> 
         </div>
         @if($activeSemester) {{-- Hanya tampilkan tombol jika ada semester aktif --}}
-        <a href="#" class="btn btn-sm btn-danger shadow-sm">
+        <a href="{{ route('semester.finalize.form') }}" class="btn btn-sm btn-danger shadow-sm">
             <i class="fas fa-flag-checkered fa-sm text-white-50"></i> Akhiri Semester
         </a>
         @endif

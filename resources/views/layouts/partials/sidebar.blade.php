@@ -8,7 +8,7 @@
             <i class="fas fa-graduation-cap"></i>
         </div>
         {{-- Nama Aplikasi --}}
-        <div class="sidebar-brand-text mx-3">APIPANAS</div>
+        <div class="sidebar-brand-text mx-3">SIM_KAP</div>
     </a>
     <hr class="sidebar-divider my-0">
 
