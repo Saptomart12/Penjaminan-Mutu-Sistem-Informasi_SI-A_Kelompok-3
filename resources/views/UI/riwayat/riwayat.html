@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Riwayat Semester - Preview</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template (SB Admin 2 CDN)-->
+    <link href="https://cdn.jsdelivr.net/npm/startbootstrap-sb-admin-2@4.1.3/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom overrides untuk simulasi tampilan */
+        .card-header .btn-link {
+            text-decoration: none;
+        }
+        .card-header .btn-link:hover {
+            text-decoration: none;
+        }
+        /* Icon indikator untuk accordion (opsional) */
+        .btn-link.collapsed::after {
+            content: '\f078'; /* FontAwesome angle-down */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            float: right;
+        }
+        .btn-link::after {
+            content: '\f077'; /* FontAwesome angle-up */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            float: right;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar (Simulasi) -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SI-A KEL 3</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-fw fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="fas fa-fw fa-history"></i><span>Riwayat</span></a>
+            </li>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar (Simulasi) -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Mahasiswa Demo</span>
+                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content (INI ADALAH BAGIAN DARI KODE BLADE ANDA YANG DIUBAH) -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Riwayat Kinerja Akademik</h1>
+                    </div>
+
+                    <!-- Alert Sukses (Simulasi session('success')) -->
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Semester berhasil difinalisasi! Data telah diarsipkan.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Arsip Semester Selesai</h6>
+                                </div>
+                                <div class="card-body">
+
+                                    <!-- Accordion Wrapper -->
+                                    <div id="accordionRiwayat">
+
+                                        <!-- ITEM 1: Semester 5 (Terbaru & Terbuka) -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h5 class="mb-0">
+                                                    <!-- Tombol tidak memiliki class 'collapsed' karena terbuka -->
+                                                    <button class="btn btn-link btn-block text-left" 
+                                                            data-toggle="collapse" 
+                                                            data-target="#collapseOne" 
+                                                            aria-expanded="true" 
+                                                            aria-controls="collapseOne">
+                                                        <strong>Semester 5</strong> 
+                                                        (IPS: <span class="font-weight-bold text-primary">3.85</span>)
+                                                    </button>
+                                                </h5>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionRiwayat">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <!-- Kolom Kiri: Rangkuman -->
+                                                        <div class="col-lg-6 mb-4">
+                                                            <h6 class="font-weight-bold text-warning">Evaluasi Kinerja:</h6>
+                                                            <p class="text-gray-700">"Kinerja sangat memuaskan. Mahasiswa menunjukkan pemahaman mendalam pada mata kuliah inti. Pertahankan konsistensi pengumpulan tugas."</p>
+                                                        </div>
+                                                        <!-- Kolom Kanan: Statistik -->
+                                                        <div class="col-lg-6">
+                                                            <h6 class="font-weight-bold text-info">Distribusi Nilai Tugas:</h6>
+                                                            
+                                                            <!-- Nilai A -->
+                                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                                <span class="text-success"><i class="fas fa-check-circle mr-1"></i> Sangat Baik (A)</span>
+                                                                <span class="font-weight-bold">12 Tugas</span>
+                                                            </div>
+                                                            <div class="progress mb-3" style="height: 5px;">
+                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 80%"></div>
+                                                            </div>
+
+                                                            <!-- Nilai B -->
+                                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                                <span class="text-info"><i class="fas fa-thumbs-up mr-1"></i> Baik (B)</span>
+                                                                <span class="font-weight-bold">3 Tugas</span>
+                                                            </div>
+                                                            <div class="progress mb-3" style="height: 5px;">
+                                                                <div class="progress-bar bg-info" role="progressbar" style="width: 20%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ITEM 2: Semester 4 (Tertutup) -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h5 class="mb-0">
+                                                    <!-- Class 'collapsed' ditambahkan, aria-expanded='false' -->
+                                                    <button class="btn btn-link btn-block text-left collapsed" 
+                                                            data-toggle="collapse" 
+                                                            data-target="#collapseTwo" 
+                                                            aria-expanded="false" 
+                                                            aria-controls="collapseTwo">
+                                                        <strong>Semester 4</strong> 
+                                                        (IPS: <span class="font-weight-bold text-primary">3.50</span>)
+                                                    </button>
+                                                </h5>
+                                            </div>
+                                            <!-- Class 'show' dihilangkan -->
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionRiwayat">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 mb-4">
+                                                            <h6 class="font-weight-bold text-warning">Evaluasi Kinerja:</h6>
+                                                            <p class="text-gray-700">"Cukup baik, namun terdapat keterlambatan pada beberapa tugas besar. Perlu peningkatan manajemen waktu."</p>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <h6 class="font-weight-bold text-info">Distribusi Nilai Tugas:</h6>
+                                                            
+                                                            <!-- Nilai B -->
+                                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                                <span class="text-info"><i class="fas fa-thumbs-up mr-1"></i> Baik (B)</span>
+                                                                <span class="font-weight-bold">8 Tugas</span>
+                                                            </div>
+                                                            <div class="progress mb-3" style="height: 5px;">
+                                                                <div class="progress-bar bg-info" role="progressbar" style="width: 60%"></div>
+                                                            </div>
+
+                                                            <!-- Nilai C -->
+                                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                                <span class="text-primary"><i class="fas fa-info-circle mr-1"></i> Cukup (C)</span>
+                                                                <span class="font-weight-bold">5 Tugas</span>
+                                                            </div>
+                                                            <div class="progress mb-3" style="height: 5px;">
+                                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 40%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ITEM 3: Semester 3 (Data Kosong/Error Case) -->
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed" 
+                                                            data-toggle="collapse" 
+                                                            data-target="#collapseThree" 
+                                                            aria-expanded="false" 
+                                                            aria-controls="collapseThree">
+                                                        <strong>Semester 3</strong> 
+                                                        (IPS: <span class="font-weight-bold text-primary">3.20</span>)
+                                                    </button>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionRiwayat">
+                                                <div class="card-body">
+                                                    <!-- Simulasi jika @else dari evaluasi -->
+                                                    <p class="text-center text-muted">Data evaluasi detail untuk semester ini tidak ditemukan atau belum digenerate.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div> 
+                                    <!-- Akhir Accordion -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Kelompok 3 2025</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Core plugin JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="https://cdn.jsdelivr.net/npm/startbootstrap-sb-admin-2@4.1.3/js/sb-admin-2.min.js"></script>
+
+</body>
+</html>
